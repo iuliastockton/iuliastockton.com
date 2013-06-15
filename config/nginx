@@ -1,0 +1,24 @@
+server {
+  listen       80;
+  server_name  iuliastockton.com www.iuliastockton.com;
+  root   /home/deployer/apps/iuliastockton.com/current;
+  index  index.html index.htm;
+
+  access_log  logs/iuliastockton.com.access.log  main;
+
+  location /docs {
+    autoindex on;
+  }
+}
+
+server {
+  listen       80;
+  server_name  cv.iuliastockton.com www.cv.iuliastockton.com;
+  root   /home/deployer/apps/iuliastockton.com/current/cv;
+
+  access_log  logs/cv.iuliastockton.com.access.log  main;
+
+  location / {
+    index  index.html index.htm;
+  }
+}
